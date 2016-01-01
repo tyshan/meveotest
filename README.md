@@ -45,7 +45,7 @@ public class ModuleTest {
 </p>
 </li>
 <li>
-<p>>Open the project from eclipse and run the test, ejb3 stateless test is ok</p>
+<p>Open the project from eclipse and run the test, ejb3 stateless test is ok</p>
 </li>
 </ul>
 
