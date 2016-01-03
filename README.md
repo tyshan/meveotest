@@ -13,7 +13,7 @@
 </li>
 <li>
 <p>create a test</p>
-<code>
+<blockquote>
 @RunWith(Arquillian.class)
 public class ModuleTest {
 
@@ -41,7 +41,7 @@ public class ModuleTest {
 		meveoModuleService.exportModule2MeveoInstance(meveoModule, meveoInstance,currentUser);
 	}
 }
-</code>
+</blockquote>
 </p>
 </li>
 <li>
