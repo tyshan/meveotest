@@ -14,33 +14,35 @@
 <li>
 <p>create a test</p>
 <blockquote>
-@RunWith(Arquillian.class)
-public class ModuleTest {
+@RunWith(Arquillian.class)<br/>
+public class ModuleTest {<br/>
 
-	private static final String webwar = "/home/tech/development/seb/workspace/meveo1/meveo-admin/web/target/meveo.war";
+	private static final String webwar = "/home/tech/development/seb/workspace/meveo1/meveo-admin/web/target/meveo.war";<br/>
 
-	@Inject
-	private Logger log;
-	@Inject
-	private MeveoModuleService meveoModuleService;
+	@Inject<br/>
+	private Logger log;<br/>
+	@Inject<br/>
+	private MeveoModuleService meveoModuleService;<br/>
+	...<br/>
 	
-	@Deployment
-	public static Archive<?> createTestArchive() {
-		WebArchive result = ShrinkWrap.createFromZipFile(WebArchive.class, new File(webwar));
-		return result;
-	}
+	@Deployment<br/>
+	public static Archive<?> createTestArchive() {<br/>
+		WebArchive result = ShrinkWrap.createFromZipFile(WebArchive.class, new File(webwar));<br/>
+		return result;<br/>
+	}<br/>
 
-	@Before
-	public void init() throws Exception {
-		meveoModule=meveoModuleService.findByCode("module100", provider);
-	}
+	@Before<br/>
+	public void init() throws Exception {<br/>
+		meveoModule=meveoModuleService.findByCode("module100", provider);<br/>
+		...<br/>
+	}<br/>
 
-	@Test
-	public void testExportModule() throws Exception {
-		log.debug("start module export test");
-		meveoModuleService.exportModule2MeveoInstance(meveoModule, meveoInstance,currentUser);
-	}
-}
+	@Test<br/>
+	public void testExportModule() throws Exception {<br/>
+		log.debug("start module export test");<br/>
+		meveoModuleService.exportModule2MeveoInstance(meveoModule, meveoInstance,currentUser);<br/>
+	}<br/>
+}<br/>
 </blockquote>
 </p>
 </li>
