@@ -2,7 +2,7 @@
 <h3>Meveo test</h3>
 
 <p>This unit test is for <a href="https://www.assembla.com/spaces/meveo/wiki">MEVEO</a></p>
-<p>Please create the test environment from the existed meveo's subproject <a href="https://www.assembla.com/spaces/meveo/git/source/master/meveo-tests">meveo-tests</a>. 
+
 <ul>
 <li>
 <p>In project root folder, run maven in a console</p>
