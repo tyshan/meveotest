@@ -56,24 +56,19 @@
 	</dependencyManagement>
 	<dependencies>
 		<dependency>
-			<groupId>org.manaty</groupId>
+			<groupId>org.meveo</groupId>
 			<artifactId>meveo-model</artifactId>
-			<version>4.2</version>
+			<version>4.3</version>
 		</dependency>
 		<dependency>
-			<groupId>org.manaty</groupId>
+			<groupId>org.meveo</groupId>
 			<artifactId>meveo-admin-ejbs</artifactId>
-			<version>4.2</version>
-		</dependency>
-		<dependency>
-			<groupId>org.manaty</groupId>
-			<artifactId>meveo-admin-web</artifactId>
-			<version>4.2</version>
+			<version>4.3</version>
 		</dependency>
 		<dependency>
 			<groupId>org.meveo</groupId>
 			<artifactId>meveo-api</artifactId>
-			<version>4.2</version>
+			<version>4.3</version>
 		</dependency>
 		<dependency>
 			<groupId>junit</groupId>
@@ -113,16 +108,6 @@
 				<configuration>
 					<source>1.7</source>
 					<target>1.7</target>
-				</configuration>
-			</plugin>
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-surefire-plugin</artifactId>
-				<configuration>
-					<excludes>
-						<exclude>**/AbstractTest.java</exclude>
-						<exclude>**/BaseTest.java</exclude>
-					</excludes>
 				</configuration>
 			</plugin>
 		</plugins>

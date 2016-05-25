@@ -17,7 +17,7 @@
 @RunWith(Arquillian.class)<br/>
 public class ModuleTest {<br/>
 
-	private static final String webwar = "/home/tech/development/seb/workspace/meveo1/meveo-admin/web/target/meveo.war";<br/>
+	private static final String webwar = "/home/tech/development/seb/workspace/meveo/meveo-admin/web/target/meveo.war";<br/>
 
 	@Inject<br/>
 	private Logger log;<br/>
@@ -49,6 +49,7 @@ public class ModuleTest {<br/>
 <li>
 <p>Open the project from eclipse and run the test, ejb3 stateless test is ok</p>
 </li>
+<p>Attention: install jdk8, I found issues in jdk7 like OutofPerm</p>
 </ul>
 
 

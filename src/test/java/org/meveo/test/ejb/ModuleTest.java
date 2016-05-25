@@ -1,6 +1,7 @@
 package org.meveo.test.ejb;
 
 import java.io.File;
+import java.util.List;
 
 import javax.inject.Inject;
 
@@ -9,13 +10,14 @@ import org.jboss.arquillian.junit.Arquillian;
 import org.jboss.shrinkwrap.api.Archive;
 import org.jboss.shrinkwrap.api.ShrinkWrap;
 import org.jboss.shrinkwrap.api.spec.WebArchive;
+import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
-import org.meveo.model.admin.MeveoModule;
 import org.meveo.model.admin.User;
 import org.meveo.model.communication.MeveoInstance;
 import org.meveo.model.crm.Provider;
+import org.meveo.model.module.MeveoModule;
 import org.meveo.service.admin.impl.MeveoModuleService;
 import org.meveo.service.admin.impl.UserService;
 import org.meveo.service.communication.impl.MeveoInstanceService;
@@ -31,8 +33,7 @@ import org.slf4j.Logger;
 
 @RunWith(Arquillian.class)
 public class ModuleTest {
-
-	private static final String webwar = "/home/tech/development/seb/workspace/meveo1/meveo-admin/web/target/meveo.war";
+	private static final String webwar = "/home/tech/development/seb/workspace/meveo/meveo-admin/web/target/meveo.war";
 
 	@Inject
 	private Logger log;
@@ -58,16 +59,19 @@ public class ModuleTest {
 
 	@Before
 	public void init() throws Exception {
-		provider=providerService.findByCode("DEMO");
-		meveoInstance = meveoInstanceService.findByCode("localhost");
-		meveoModule=meveoModuleService.findByCode("module100", provider);
-		currentUser=userService.findByUsername("meveo.admin");
+//		provider=providerService.findByCode("DEMO");
+//		meveoInstance = meveoInstanceService.findByCode("localhost");
+//		meveoModule=meveoModuleService.findByCode("module100", provider);
+//		currentUser=userService.findByUsername("meveo.admin");
 	}
 
 	@Test()
-	public void testExportModule() throws Exception {
+	public void testModuleByCFT() throws Exception {
 		log.debug("start module export test");
-		meveoModuleService.exportModule2MeveoInstance(meveoModule, meveoInstance,currentUser);
+		String code="helloecs";
+		String type="org.meveo.model.customEntities.CustomEntityTemplate";
+		List<MeveoModule> modules=meveoModuleService.findModuleByItemCodeAndType(code, type);
+		Assert.assertTrue(modules!=null&&modules.size()==1);
 	}
 
 }

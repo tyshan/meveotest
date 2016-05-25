@@ -25,10 +25,11 @@
 		<!-- By default, arquillian will use the JBOSS_HOME environment variable. 
 			Alternatively, the configuration below can be uncommented. -->
 		<configuration>
-			<property name="jbossHome">/home/tech/development/seb/jboss-eap-6.2</property>
-			<property name="javaVmArguments">-Xmx2048m -XX:MaxPermSize=256m
+			<property name="jbossHome">/home/tech/development/seb/jboss-eap-6.2.test</property>
+<!-- 			<property name="javaVmArguments">-Xmx2048m -XX:MaxPermSize=256m -->
 <!-- 			-Xrunjdwp:transport=dt_socket,address=8787,server=y,suspend=y -->
-			</property>
+<!-- 			</property> -->
+			<property name="javaVmArguments">-Xms64m -Xmx1024m -XX:MaxPermSize=1024m -Dorg.jboss.resolver.warning=true</property>
 		</configuration>
 	</container>
 
