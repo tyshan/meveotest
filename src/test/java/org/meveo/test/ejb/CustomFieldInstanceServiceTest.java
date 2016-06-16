@@ -77,11 +77,11 @@ public class CustomFieldInstanceServiceTest {
 	@Test
 	public void testSubscriptionInheritedOnlyCFValueCumulative() throws Exception{
 		Object value=customFieldInstanceService.getInheritedOnlyCFValueCumulative(subscription, "sellercfe", currentUser);
-		Assert.assertEquals(111, value);
+		Assert.assertEquals(111L, value);
 	}
 	@Test
 	public void testSubscriptionInheritedOnlyCFValue() throws Exception{
 		Object value=customFieldInstanceService.getInheritedOnlyCFValue(subscription, "sellercfe", currentUser);
-		Assert.assertEquals(111, value);
+		Assert.assertEquals(111L, value);
 	}
 }
