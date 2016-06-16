@@ -59,19 +59,14 @@ public class ModuleTest {
 
 	@Before
 	public void init() throws Exception {
-//		provider=providerService.findByCode("DEMO");
-//		meveoInstance = meveoInstanceService.findByCode("localhost");
-//		meveoModule=meveoModuleService.findByCode("module100", provider);
-//		currentUser=userService.findByUsername("meveo.admin");
 	}
-
 	@Test()
 	public void testModuleByCFT() throws Exception {
-		log.debug("start module export test");
-		String code="helloecs";
-		String type="org.meveo.model.customEntities.CustomEntityTemplate";
-		List<MeveoModule> modules=meveoModuleService.findModuleByItemCodeAndType(code, type);
-		Assert.assertTrue(modules!=null&&modules.size()==1);
+		log.debug("start test for moudule...");
+		String code="hello";
+		String clazz="org.meveo.model.customEntities.CustomEntityTemplate";
+//		List<MeveoModule> modules=meveoModuleService.findModuleByItemCodeAndClazzAppliesTo(code, clazz,null);
+//		Assert.assertTrue(modules!=null&&modules.size()==1);
 	}
 
 }

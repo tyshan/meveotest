@@ -49,7 +49,7 @@ public class ModuleTest {<br/>
 <li>
 <p>Open the project from eclipse and run the test, ejb3 stateless test is ok</p>
 </li>
-<p>Attention: install jdk8, I found issues in jdk7 like OutofPerm</p>
+<p>Attention: install jdk8, I found issues in jdk7 like OutofPerm Exception, but forward to JDK8, it is solved</p>
 </ul>
 
 
